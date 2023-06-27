@@ -1,0 +1,148 @@
+@media screen and (min-width: 712px) {
+	.nav-bar {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		border-bottom: none;
+
+		.nav-btn {
+			display: none;
+		}
+		.nav-links {
+			flex-direction: row;
+			// width: 60%;
+			background: $primaryColor;
+			margin-right: 0;
+			border-bottom: none;
+			a {
+				display: block;
+				color: $tertiaryColor;
+				padding: 1rem;
+				font-size: 1.32rem;
+
+				&:hover {
+					padding-left: 16px;
+					background: $primaryColor;
+					color: $secondaryColor;
+					// transform: scale(1.1);
+				}
+			}
+		}
+	}
+	.skills-contain {
+		display: grid;
+		grid-template: 300px 300px / 300px 300px;
+		grid-row-gap: 3rem;
+		grid-column-gap: 4.5rem;
+
+		.skill {
+			width: 300px;
+			&:hover {
+				background: unset;
+				color: $tertiaryColor;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 796px) {
+	form {
+		margin: 0 10rem;
+	}
+}
+
+@media screen and (min-width: 880px) {
+	.banner {
+		background-image: url('../Assests/svg/circle.svg'),
+			linear-gradient(360deg, #4600c0, $primaryColor);
+		grid-template-columns: repeat(2, 50vw);
+		clip-path: unset;
+		.banner-contain {
+			height: 100%;
+			transform: unset;
+		}
+		.banner-contain-img {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: 600px;
+				margin-right: 1rem;
+			}
+		}
+		&-contain {
+			text-align: left;
+
+			h1,
+			h4 {
+				padding-left: 2rem;
+				text-align: left;
+			}
+			button {
+				margin-left: 2rem;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1254px) {
+	.skills-contain {
+		.skill-4 {
+			display: none;
+		}
+		display: grid;
+		grid-template: 100% / repeat(4, 1fr);
+		grid-column-gap: 0.6rem;
+
+		.skill {
+			// width: 230px;
+			text-align: center;
+			h3 {
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	form {
+		margin: 0 25rem;
+	}
+}
+
+@media screen and (max-width: 856px) {
+	.project-contain {
+		img {
+			width: 95%;
+			max-height: 400px;
+		}
+		.project {
+			// background: pink;
+			grid-template: 1fr 1fr / 1fr;
+			margin-bottom: 1rem;
+			.img-container {
+				align-items: center;
+			}
+			.text-container {
+				align-items: left;
+				h2 {
+					font-size: 1.8rem;
+					margin-bottom: 0rem;
+				}
+				h5 {
+					font-size: 0.8rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+				a {
+					width: fit-content;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	.change2 {
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+}
